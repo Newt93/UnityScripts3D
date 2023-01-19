@@ -23,7 +23,7 @@ public class BossBattle : MonoBehaviour
     {
         if (boss != null)
         {
-            if (Input.GetKeyDown(KeyCode.a))
+            if (Input.GetMouseButtonDown(0))
             {
                 bossHealth -= playerDamage;
                 Debug.Log("Player dealt " + playerDamage + " damage to the boss. Boss health: " + bossHealth);
