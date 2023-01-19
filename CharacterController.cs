@@ -65,17 +65,14 @@ public class PlayerCharacterController : MonoBehaviour
         }
     }
     
+    if (!isJumping && Input.GetKeyDown(KeyCode.Space))
+      {
+        Jump();
+      }
     void Jump()
     {
         rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         isJumping = true;
-    }
-    
-    
-    if (!isJumping && Input.GetKeyDown(KeyCode.Space))
-     {
-        Jump();
-      }
     }
 
     private void OnCollisionEnter(Collision collision)
